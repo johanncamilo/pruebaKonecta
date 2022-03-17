@@ -1,0 +1,24 @@
+﻿@model List<Sale>
+
+
+<h1>Historial de Ventas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>Cantidad</th>
+            <th>FechaVenta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var venta in Model)
+        {
+            <tr>                
+                <td>@venta.ProductId</td>
+                <td>@venta.Cantidad</td>
+                <td>@venta.FechaVenta</td>
+            </tr>
+        }
+    </tbody>
+</table>
